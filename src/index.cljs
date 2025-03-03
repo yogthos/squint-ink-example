@@ -1,7 +1,7 @@
 (ns index
- (:require
-  ["ink" :refer [render Text]]
-  ["react" :as react]))
+  (:require
+   ["ink" :refer [render Box Text]]
+   ["react" :as react]))
 
 (set! process.env.FORCE_COLOR 1)
 
@@ -15,6 +15,8 @@
                     1000)]
          (fn []
            (js/clearInterval timer)))))
-    (react/createElement Text {:color "green"} counter " tests passed")))
+    (react/createElement Box {:width 16
+                              :borderStyle "double"}
+                         (react/createElement Text {:color "green"} counter " tests passed"))))
 
 (render (react/createElement Counter))
