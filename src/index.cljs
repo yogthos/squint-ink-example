@@ -15,6 +15,6 @@
                     1000)]
          (fn []
            (js/clearInterval timer)))))
-    (react/createElement Text nil counter " tests passed")))
+    (react/createElement Text {:color "green"} counter " tests passed")))
 
 (render (react/createElement Counter))
