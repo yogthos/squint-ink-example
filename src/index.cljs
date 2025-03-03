@@ -3,6 +3,8 @@
   ["ink" :refer [render Text]]
   ["react" :as react]))
 
+(set! process.env.FORCE_COLOR 1)
+
 (defn Counter []
   (let [[counter setCounter] (react/useState 0)]
     (react/useEffect
